@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psychosis by robjam1990</title>
     <link rel="stylesheet" href="robjam1990.ca.css">
-    <script src="js/script.js" defer></script>
+    <style>
+        #game {
+            width: 600px;
+            height: 600px;
+            background-color: grey;
+        }
+    </style>
 </head>
-
 <body class="homepage">
     <header id="header">
         <div class="container">
@@ -49,145 +53,74 @@
             <p>Psychosis is a Contextual based game created by Robert James Newell of robjam1990.</p>
         </div>
     </section>
-    <div class="wrapper">
-        <section class="style2">
-            <div class="container">
-                <div class="row double">
-                    <div class="6u">
-                        <header class="major">
-                            <h2>Login</h2>
-                            <span class="byline">Login to robjam1990.ca</span>
-                        </header>
-                    </div>
-                    <div class="6u">
-                        <h3>Signup</h3>
-                        <p>Create an account with robjam1990.ca</p>
-                        <a href="login.html" class="button">Login</a>
-                        <a href="signup.html" class="button">Signup</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="style3">
-            <div class="container">
-                <header class="major">
-                    <h2>Guest</h2>
-                </header>
-                <p>Play the game without an account.</p>
-                <a href="guest-play.html" class="button alt">Continue</a>
-            </div>
-        </section>
-        <section class="wrapper style4">
-            <div class="container">
-                <header class="major">
-                    <h2>About</h2>
-                    <span class="byline">About robjam1990</span>
-                </header>
-                <div class="row flush">
-                    <div class="4u">
-                        <ul class="special-icons">
-                            <li>
-                                <span class="fa fa-cogs"></span>
-                                <h3>About robjam1990</h3>
-                                <p>About robjam1990</p>
-                            </li>
-                            <li>
-                                <span class="fa fa-wrench"></span>
-                                <h3>Notice Board</h3>
-                                <p>Notice Board</p>
-                            </li>
-                            <li>
-                                <span class="fa fa-leaf"></span>
-                                <h3>Encyclopedia</h3>
-                                <p>Encyclopedia</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="4u">
-                        <ul class="special-icons">
-                            <li>
-                                <span class="fa fa-cogs"></span>
-                                <h3>Speak with an AI</h3>
-                                <p>Tester</p>
-                            </li>
-                            <li>
-                                <span class="fa fa-wrench"></span>
-                                <h3>Tester</h3>
-                                <p>Tester</p>
-                            </li>
-                            <li>
-                                <span class="fa fa-leaf"></span>
-                                <h3>Tester</h3>
-                                <p>Tester</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="4u">
-                        <ul class="special-icons">
-                            <li>
-                                <span class="fa fa-cogs"></span>
-                                <h3>Contact a Human</h3>
-                                <p>Tester</p>
-                            </li>
-                            <li>
-                                <span class="fa fa-wrench"></span>
-                                <h3>Tester</h3>
-                                <p>Tester</p>
-                            </li>
-                            <li>
-                                <span class="fa fa-leaf"></span>
-                                <h3>Tester</h3>
-                                <p>Tester</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="wrapper style5">
-            <div class="container">
-                <header class="major">
-                    <h2>Tester</h2>
-                    <span class="byline">Tester</span>
-                </header>
-                <div class="row">
-                    <div class="3u">
-                        <a href="#" class="image"><img src="images/Arkantos.png" alt="" width="162" height="162"></a>
-                        <h3>Tester</h3>
-                        <p>Tester</p>
-                    </div>
-                    <div class="3u">
-                        <a href="#" class="image"><img src="images/Ilfa tree.png" alt="" width="162" height="162"></a>
-                        <h3>Tester</h3>
-                        <p>Tester</p>
-                    </div>
-                    <div class="3u">
-                        <a href="#" class="image"><img src="images/Thear Cartograph.png" alt="" width="162"
-                                height="162"></a>
-                        <h3>Tester</h3>
-                        <p>Tester</p>
-                    </div>
-                    <div class="3u">
-                        <a href="#" class="image"><img src="images/Thear.png" alt="" width="162" height="162"></a>
-                        <h3>Bruce Lee</h3>
-                        <p>Tester</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <footer id="footer">
-        <div class="container">
-            <header class="major">
-                <h2>Connect with us</h2>
-            </header>
-            <ul class="icons">
-                <li><a href="#" class="fa fa-facebook" aria-label="Facebook"><span>Facebook</span></a></li>
-                <li><a href="#" class="fa fa-twitter" aria-label="Twitter"><span>Twitter</span></a></li>
-                <li><a href="#" class="fa fa-pinterest" aria-label="Pinterest"><span>Pinterest</span></a></li>
-                <li><a href="#" class="fa fa-google-plus" aria-label="Google+"><span>Google+</span></a></li>
-            </ul>
-        </div>
+    <canvas id="game"></canvas>
+    <script>
+        function Game() {
+            this.canvas = document.getElementById("game");
+
+            this.start = function() {
+                this.canvas.width = 600;
+                this.canvas.height = 600;
+                this.context = this.canvas.getContext("2d");
+                this.interval = setInterval(gameTick, 20);
+            }
+
+            this.clear = function() {
+                this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            }
+        }
+
+        function Player(color, x, y, z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+
+            this.update = function() {
+                this.move(mouseState);
+                var context = game.context;
+                context.fillStyle = color;
+                context.beginPath();
+                context.arc(this.x, this.y, this.z, 16, 0, 2 * Math.PI);
+                context.fill();
+            }
+
+            this.move = function(event) {
+                if (event == null) {
+                    return;
+                }
+                var x = event.clientX;
+                var y = event.clientY;
+                if (x < player.x && x > 0) {
+                    player.x = player.x - 2;
+                } else if (x > player.x && x < game.canvas.width) {
+                    player.x = player.x + 2;
+                }
+                if (y < player.y && y > 0) {
+                    player.y = player.y - 2;
+                } else if (y > player.y && y < game.canvas.width) {
+                    player.y = player.y + 2;
+                }
+            }
+        }
+
+        function gameTick() {
+            console.log("tick");
+            game.clear();
+            player.update();
+        }
+
+        function mouseMove(event) {
+            mouseState = event;
+        }
+
+        var game = new Game();
+        var player = new Player("red", 300, 300, 16);
+        var mouseState = null;
+        game.start();
+
+        window.addEventListener("mousemove", mouseMove, false);
+    </script>
+    <footer>
         <div class="copyright">
             <ul class="menu">
                 <li>&copy; robjam1990. All rights reserved.</li>
@@ -195,5 +128,4 @@
         </div>
     </footer>
 </body>
-
 </html>
