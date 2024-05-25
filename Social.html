@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Social Hub for the game Thear">
+    <meta name="keywords" content="Thear, game, social, hub, character, converse, friends, enemies">
+    <meta name="author" content="robjam1990">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    <title>Social</title>
+    <style>
+        /* Add custom styles here */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-y: scroll;
+            background-color: #f0f0f0;
+            margin: 0;
+            height: 100%;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1,
+        h2 {
+            margin: 10px 0;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        section {
+            padding: 20px;
+            background-color: #fff;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Adjust button styles */
+        section button {
+            display: block;
+            margin: 10px auto;
+            /* Center the buttons and add space between them */
+            padding: 15px 20px;
+            /* Increase button size */
+            font-size: 18px;
+            /* Increase font size */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .interaction-button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+
+        .event-link {
+            display: block;
+            margin: 5px auto;
+            font-size: 16px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .event-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Add more custom styles as needed */
+    </style>
+
+    <script>
+        // Add your JavaScript code here
+        // This script will be included in the HTML file
+        // You can add event listeners, fetch data, or manipulate the DOM
+        src = "Social.coffee"
+        src = "Social.cs"
+        src = "Social.html"
+        src = "Program.cs"
+        src = "Chat.html"
+        src="Words.json"
+        </script>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        </nav>
+    <header>
+        <h1>Social Hub</h1>
+        <p>Connect with the denizens of Thear in this social space.</p>
+    </header>
+
+    <section>
+        <h2>Interact with the World</h2>
+        <p>Explore various social interactions in the world of Psychosis. Engage with characters, converse with NPCs, and
+            build relationships with friends and foes.</p>
+        </section>
+
+    <section>
+        <button id="character-button">Character</button>
+        <button id="converse-button">Converse</button>
+        <button id="friends-button">Friends</button>
+        <button id="enemies-button">Enemies</button>
+
+        <p>Click on the buttons above to access different social features.</p>
+
+        <p>Character: View your character profile and attributes.</p>
+        <p>Converse: Engage in conversations with NPCs and other players.</p>
+        <p>Friends: Manage your list of friends and allies.</p>
+        <p>Enemies: Keep track of your enemies and rivals.</p>
+
+        <p>Start exploring the social dynamics of Thear!</p>
+    </section>
+
+    <section>
+        <h2>Recent Activity</h2>
+        <p>Stay updated on recent social interactions and events in Thear. Check out the latest happenings and connect
+            with other players.</p>
+        </section>
+
+    <section>
+        <h2>Notifications</h2>
+        <p>Receive notifications about friend requests, messages, and social events. Stay informed about the social
+            activities in Thear.</p>
+        </section>
+
+    <section>
+        <h2>Chat</h2>
+        <p>Join the chat room to interact with other players in real-time. Discuss quests, strategies, and socialize with
+            fellow adventurers.</p>
+        </section>
+
+    <section>
+        <h2>Leaderboards</h2>
+        <p>Compete with other players and climb the social leaderboards. Earn reputation, complete challenges, and
+            achieve social milestones.</p>
+        </section>
+
+    <section>
+        <h2>Quests and Challenges</h2>
+        <p>Embark on social quests and challenges to test your social skills and earn rewards. Complete tasks, solve
+            puzzles, and interact with characters to progress in the game.</p>
+            </section>
+
+    <section>
+        <h2>Tavern Interactions</h2>
+        <p>Visit the local tavern to engage in various social activities. Interact with NPCs, play games, and gather
+            information about the world of Thear.</p>
+        <div id="tavern-interactions"></div>
+    </section>
+
+    <section>
+        <h2>Local Events</h2>
+        <p>Participate in upcoming events and festivals in Thear. Join tournaments, attend gatherings, and explore the
+            social scene in the game world.</p>
+        <div id="local-events"></div>
+        </section>
+
+    <section>
+        <h2>Player Interactions</h2>
+        <p>Connect with other players in the game. Form parties, trade items, and engage in duels to test your skills and
+            build relationships.</p>
+        <div id="player-interactions"></div>
+        </section>
+
+    <section>
+        <h2>Feedback and Suggestions</h2>
+        <p>Share your feedback and suggestions to improve the social experience in Thear. Help us enhance the social
+            features and interactions in the game.</p>
+        </section>
+
+    <section>
+        <h2>Report Abuse</h2>
+        <p>Report any abusive behavior, harassment, or inappropriate content in the social space. Help us maintain a
+            positive and welcoming environment for all players.</p>
+        </section>
+
+    <section>
+        <h2>Support and Assistance</h2>
+        <p>Need help with social interactions or facing challenges in the game? Contact our support team for assistance
+            and guidance. We're here to help you navigate the social world of Thear.</p>
+        </section>
+
+    <section>
+        <h2>Terms of Service</h2>
+        <p>Read the terms of service and guidelines for social interactions in Thear. Understand the rules, policies, and
+            expectations for engaging with other players in the game.</p>
+        </section>
+
+    <section>
+        <h2>Privacy Policy</h2>
+        <p>Review the privacy policy and data protection measures for social interactions in Thear. Learn how we handle
+            your personal information, chat data, and social interactions in the game.</p>
+        </section>
+
+    <section>
+        <h2>Community Guidelines</h2>
+        <p>Explore the community guidelines and code of conduct for social interactions in Thear. Follow the guidelines,
+            respect other players, and contribute to a positive social environment in the game.</p>
+        </section>
+
+    <section>
+        <h2>FAQs</h2>
+        <p>Find answers to frequently asked questions about social interactions, character relationships, and social
+            dynamics in Thear. Get insights, tips, and information to enhance your social experience in the game.</p>
+        </section>
+
+    <footer>
+        <p>&copy; 2024 robjam1990 Online. All rights reserved.</p>
+        <p>Forge alliances, build relationships, and shape the social fabric of Thear!</p>
+    </footer>
+
+    <script>
+        // Add your JavaScript code here
+        // This script will be included in the HTML file
+        // You can add event listeners, fetch data, or manipulate the DOM
+        src = "Social.coffee"
+        src = "Social.cs"
+        src = "Social.html"
+        src = "Program.cs"
+        src = "Chat.html"
+        src="Words.json"
+        </script>
+
+    <script>
+        class Character {
+            constructor(name) {
+                this.name = name;
+                this.friends = [];
+                this.enemies = [];
+            }
+
+            addFriend(friend) {
+                this.friends.push(friend);
+            }
+
+            addEnemy(enemy) {
+                this.enemies.push(enemy);
+            }
+
+            getFriends() {
+                return this.friends;
+            }
+
+            getEnemies() {
+                return this.enemies;
+            }
+        }
+
+        function populateTavernInteractions() {
+            const tavernInteractionsSection = document.getElementById("tavern-interactions");
+            // Fetch available tavern interactions (e.g., conversations, games) from the game world
+
+            // Replace this with actual data
+            const availableInteractions = [
+                "Engage in Conversation",
+                "Challenge NPCs to Games",
+                "Gather Information"
+            ];
+
+            // Clear previous content
+            tavernInteractionsSection.innerHTML = "";
+
+            // Display each interaction as clickable buttons
+            availableInteractions.forEach(interaction => {
+                const interactionButton = document.createElement("button");
+                interactionButton.textContent = interaction;
+                interactionButton.classList.add("interaction-button");
+                tavernInteractionsSection.appendChild(interactionButton);
+            });
+        }
+
+        // Call the function to populate tavern interactions on page load
+        populateTavernInteractions();
+
+
+        function populateLocalEvents() {
+            const localEventsSection = document.getElementById("local-events");
+            // Fetch upcoming events from the game world (this could be replaced with actual data)
+            const upcomingEvents = ["Festival of Nexus", "Tournament of Champions", "Gathering of Adventurers"];
+
+            // Clear previous content
+            localEventsSection.innerHTML = "";
+
+            // Display each event as clickable links
+            upcomingEvents.forEach(event => {
+                const eventLink = document.createElement("a");
+                eventLink.textContent = event;
+                eventLink.href = "#"; // Replace with actual event page link
+                eventLink.classList.add("event-link");
+                localEventsSection.appendChild(eventLink);
+                localEventsSection.appendChild(document.createElement("br"));
+            });
+        }
+
+        // Call the function to populate local events on page load
+        populateLocalEvents();
+
+        function handlePlayerInteractions() {
+            // Implement functionality to handle player interactions
+            // For example, forming parties, trading items, engaging in duels
+            // This could involve opening modal dialogs or initiating specific game actions
+        }
+
+        // Add event listener to player interactions section
+        const playerInteractionsSection = document.getElementById("player-interactions");
+        playerInteractionsSection.addEventListener("click", handlePlayerInteractions);
+
+
+        // index.js
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize UI elements
+            const characterButton = document.querySelector("#character-button");
+            const converseButton = document.querySelector("#converse-button");
+            const friendsButton = document.querySelector("#friends-button");
+            const enemiesButton = document.querySelector("#enemies-button");
+
+            // Add event listeners
+            characterButton.addEventListener("click", () => {
+                window.location.href = "Character.html";
+            });
+
+            converseButton.addEventListener("click", startConversation);
+            friendsButton.addEventListener("click", () => {
+                const friendsList = currentUser.getFriends();
+                // Display friends list
+            });
+            enemiesButton.addEventListener("click", () => {
+                const enemiesList = currentUser.getEnemies();
+                // Display enemies list
+            });
+        });
+    </script>
+
+    <script>
+        // Add your JavaScript code here
+        // This script will be included in the HTML file
+        // You can add event listeners, fetch data, or manipulate the DOM
+        src = "Social.coffee"
+        src = "Social.cs"
+        src = "Social.html"
+        src = "Program.cs"
+        src = "Chat.html"
+        src="Words.json"
+        </script>
+</body>
+
+</html>

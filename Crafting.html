@@ -1,0 +1,130 @@
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Crafting</title>
+        <style>
+            /* Add some styling here */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                padding: 20px;
+            }/* Remove default bullets */
+ul, #myUL {
+  list-style-type: none;
+}
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the caret/arrow */
+ .caret {
+  cursor: pointer; 
+  user-select: none; /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+  transform: rotate(90deg); 
+}
+
+/* Hide the nested list */
+.nested {
+  display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+  display: block;
+} 
+        </style>
+    </head>
+
+    <body>
+        <h1>Crafting</h1>
+        <p>Here you can craft items using the resources you have collected.</p>
+        <h2>Resources</h2>
+        <p>Here are the resources you have collected:</p>
+        <ul>
+            <li>Steel: <span id="steel">0</span></li>
+            <li>Gold: <span id="gold">0</span></li>
+            <li>Wood: <span id="wood">0</span></li>
+            <li>Stone: <span id="stone">0</span></li>
+            <li>Iron: <span id="iron">0</span></li>
+            <li>Diamond: <span id="diamond">0</span></li>
+            <li>Emerald: <span id="emerald">0</span></li>
+            </ul>
+        <h2>Crafting</h2>
+        <p>Here you can craft items using the resources you have collected:</p>
+        <p>Click on the buttons below to craft items:</p>
+        <ul>
+            <li><button onclick="craft('axe')">Craft Axe</button></li>
+            <li><button onclick="craft('pickaxe')">Craft Pickaxe</button></li>
+            <li><button onclick="craft('sword')">Craft Sword</button></li>
+            <li><button onclick="craft('armor')">Craft Armor</button></li>
+            <li><button onclick="craft('bow')">Craft Bow</button></li>
+            <li><button onclick="craft('arrow')">Craft Arrow</button></li>
+            </ul>
+        <h2>Inventory</h2>
+        <p>Here are the items you have crafted:</p>
+        <ul id="inventory">
+            </ul>
+        <h2>Delegation</h2>
+        <p>Here you can delegate tasks to other characters:</p>
+        <p>Click on the buttons below to delegate tasks:</p>
+        <ul>
+            <li><button onclick="delegate('mine')">Delegate Mining</button></li>
+            <li><button onclick="delegate('chop')">Delegate Chopping</button></li>
+            <li><button onclick="delegate('hunt')">Delegate Hunting</button></li>
+            </ul>
+        <h2>Characters</h2>
+        <p>Here are the characters you have delegated tasks to:</p>
+        <ul id="characters">
+            </ul>
+        <h2>Resources</h2>
+        <p>Here are the resources the characters have collected:</p>
+        <ul id="character-resources">
+            </ul>
+        <h2>Program</h2>
+        <p>Here is the program that manages the characters and resources:</p>
+        <ul id="program">
+            </ul>
+        <h2>Code</h2>
+        <p>Here is the code for the program:</p>
+        <ul>
+            <li class="caret">Program.cs
+                <ul class="nested">
+                    <li>Character.cs</li>
+                    <li>Item.cs</li>
+                    <li>Inventory.cs</li>
+                    <li>Crafting.cs</li>
+                    <li>Delegation.cs</li>
+                    <li>resources.cs</li>
+                    </ul>
+                </li>
+            </ul>
+        <script>
+            Program.cs
+            Character.cs
+            Item.cs
+            Inventory.cs
+            Crafting.cs
+            Delegation.cs
+            resources.cs
+        </script>
+    </body>
+
+<h6>~robjam1990</h6>
+
+    </html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychosis: Thear Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="site-title">Psychosis: Thear Adventure</h1>
+        <!-- Main game navigation -->
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="#Character">Explore</a></li>
+                <li><a href="#Character">Inventory</a></li>
+                <li><a href="#Character">Quests</a></li>
+                <li><a href="#Options">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Main game content -->
+        <main>
+            <!-- Display game view and actions -->
+            <div id="game-view">
+                <!-- Display current location, description, and interactions -->
+                <h2>Main Hall of Nexus Taverne</h2>
+                <p>Welcome to the bustling Taverne in the heart of Nexus!</p>
+                <p>There are many patrons enjoying their meals and drinks, and a bard playing a lively tune in the corner.</p>
+                <p>What would you like to do?</p>
+                <!-- Display combat actions -->
+                <div id="combat-actions">
+                    <button class="combat-action" onclick="attack()">Attack</button>
+                    <button class="combat-action" onclick="defend()">Defend</button>
+                    <!-- Add more combat actions -->
+                </div>
+                <!-- Display animal interaction options -->
+                <div id="animal-interactions">
+                    <button class="animal-interaction" onclick="speak()">Speak to Animal</button>
+                    <button class="animal-interaction" onclick="feed()">Feed Animal</button>
+                    <!-- Add more animal interaction options -->
+                </div>
+                <!-- Display time and day/night cycle -->
+                <div id="time-display">
+                    <p>Day 1, Morning</p>
+                </div>
+                <!-- Display available items for trade -->
+                <div id="trade-options">
+                    <h3>Trade Options</h3>
+                    <p>What would you like to trade for?</p>
+                    <ul>
+                        <li>Food - 5 gold</li>
+                        <li>Weapon - 20 gold</li>
+                        <li>Armor - 15 gold</li>
+                        <!-- Add more trade options -->
+                    </ul>
+                </div>
+                <!-- Display active quests -->
+                <div id="active-quests">
+                    <h3>Active Quests</h3>
+                    <ul>
+                        <li>Find the Lost Artifact</li>
+                        <li>Rescue the Captive Princess</li>
+                        <!-- Add more active quests -->
+                        </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- Chat interface for interacting with AI -->
+        <div id="chatInterface" style="display: ruby-text-container">
+            <h2>AI Interaction</h2>
+            <p>Chat with the AI in the Taverne:</p>
+            <div class="chat-container" id="chatContainer"></div>
+            <form id="messageForm" class="form">
+                <input type="text" id="messageInput" placeholder="Type your message" required>
+                <button type="submit" onclick="Send">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <aside>
+        <!-- Display player stats and information -->
+        <div id="player-stats">
+            <h2>Player Stats</h2>
+            <ul>
+                <li>Name: Player</li>
+                <li>Level: 1</li>
+                <li>Health: 100/100</li>
+                <li>Mana: 50/50</li>
+                <li>Gold: 10</li>
+                <li>Experience: 0/100</li>
+            </ul>
+        </div>
+        <!-- Display mini-map of the game world -->
+        <div id="mini-map">
+            <h2>Mini-Map</h2>
+            <img src="Thear.png" alt="Mini-Map">
+        </div>
+        </aside>
+
+    <footer>
+        <!-- Links to additional game features or settings -->
+        <ul>
+            <li><a href="#GameState">Save Game</a></li>
+            <li><a href="#GameState">Load Game</a></li>
+            <li><a href="#Options">Settings</a></li>
+            <li><a href="#Contact">Help</a></li>
+        </ul>
+    </footer>
+
+    <script src="Program.cs" async></script>
+    <script src="GameLoop.cs"></script>
+
+    <script>
+        // Example functions for combat and animal interaction
+        function attack() {
+            // Implement combat logic
+            console.log("You attack the enemy with your weapon.");
+            DamageEnemy();
+        }
+
+        function defend() {
+            // Implement defensive action
+            console.log("You prepare to defend against the enemy's attack.");
+            BlockEnemyAttack();
+        }
+
+        function speak() {
+            // Implement communication with animals
+            console.log("You attempt to communicate with the nearby animal.");
+            BinaryTranslate();
+        }
+
+        function feed() {
+            // Implement feeding animals
+            console.log("You offer food to the hungry animal.");
+            FeedAnimal();
+        }
+
+        // Example function for sending chat messages
+        function Send() {
+            // Get the message input
+            var messageInput = document.getElementById("messageInput");
+            var message = messageInput.value;
+
+            // Display the message in the chat container
+            var chatContainer = document.getElementById("chatContainer");
+            var messageElement = document.createElement("div");
+            messageElement.innerText = message;
+            chatContainer.appendChild(messageElement);
+
+            // Clear the message input
+            messageInput.value = "";
+        }
+
+        // Example function for receiving chat messages
+        function Receive(message) {
+            // Display the received message in the chat container
+            var chatContainer = document.getElementById("chatContainer");
+            var messageElement = document.createElement("div");
+            messageElement.innerText = message;
+            chatContainer.appendChild(messageElement);
+        }
+
+        // Example function for updating player stats
+        function UpdatePlayerStats(name, level, health, mana, gold, experience) {
+            // Update the player stats in the DOM
+            var playerStats = document.getElementById("player-stats");
+            playerStats.innerHTML = `
+                <h2>Player Stats</h2>
+                <ul>
+                    <li>Name: ${name}</li>
+                    <li>Level: ${level}</li>
+                    <li>Health: ${health}</li>
+                    <li>Mana: ${mana}</li>
+                    <li>Gold: ${gold}</li>
+                    <li>Experience: ${experience}</li>
+                </ul>
+            `;
+        }
+
+        // Example function for updating the time display
+        function UpdateTime(day, time) {
+            // Update the time display in the DOM
+            var timeDisplay = document.getElementById("time-display");
+            timeDisplay.innerHTML = `
+                <p>${day}, ${time}</p>
+            `;
+        }
+
+        // Example function for adding trade options
+        function AddTradeOption(item, price) {
+            // Create a new trade option element
+            var tradeOptions = document.getElementById("trade-options");
+            var tradeOptionElement = document.createElement("li");
+            tradeOptionElement.innerText = `${item} - ${price} gold`;
+            tradeOptions.appendChild(tradeOptionElement);
+        }
+
+        // Example function for adding active quests
+        function AddActiveQuest(quest) {
+            // Create a new active quest element
+            var activeQuests = document.getElementById("active-quests");
+            var activeQuestElement = document.createElement("li");
+            activeQuestElement.innerText = quest;
+            activeQuests.appendChild(activeQuestElement);
+        }
+    </script>
+</body>
+
+<h6>~robjam1990</h6>
+
+</html>

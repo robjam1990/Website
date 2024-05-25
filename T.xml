@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root<![CDATA[<element0>Thought</element0> />
+<element1>Input</element1>
+<element2>Output</element2>
+	];]>
+	<!--This SHOULD not be reachable, however we shall eventually try.-->
+<result0>Thought</result0>
+<result1>Input</result1>
+<result2>Output</result2>
+<Thought
+	<![CDATA[ { "('⃝⃝⃝⃝⃝⃞⃞⃞⃝⃟ ⃝  ')" }
+Thought="Input" Output="Thought" Input="Unknown">
+</UnknownThought>
+		];]>
+        <UnknownThought>Thought</UnknownThought>
+        <UnknownInput>Input</UnknownInput>
+        <UnknownOutput>Output</UnknownOutput>
+	</root>
+	<Message <![CDATA[Output="Message" To="You" From="Me" <![CDATA[Subject="Thought" Body="Input" Message="Output"
+		];]>];]>
+        <Subject>Thought</Subject>
+        <Body>Input</Body>
+        <Message>Output</Message> />                                          
+		<Element>Location</Element>
+		<Place>Here</Place>
+		<Time>Now</Time>
+		<Space>Everywhere</Space>
+		<Universe>Infinity!</Universe>
+		<Action>
+		Thought
+		<Movement Location="Here" isControlled="false">
+		<Direction Left='⇦' Down='⇩' Up='⇧' Right='⇨'></Direction>
+		</Movement>
+		</Action>
+		<Cause>
+		<Effect>
+		<Thought Property="Analog">
+		<Output Property="Digital-Analog" Result Comparison="True" Prediction="Input" Evaluation="Predicate" Accuracy="P/E"></Result></Output>
+		<Input Property="Digital">
+		</Effect>
+		</Cause> 
+        <.constant C=[299792km/s]>{'χίλιοι-m.s':("Thousand-Measures.Secundus")}; // Speed of light in a vacuum
+        <.constant h=[6.62607015e-34]>{'J.s':("Joule-Second")}; // Planck constant
+        <.constant k=[1.380649e-23]>{'J/K':("Joule/Kelvin")}; // Boltzmann constant
+        <.constant e=[1.602176634e-19]>{'C':("Coulomb")}; // Elementary charge
+        <.constant G=[6.67430e-11]>{'m³/(kg.s²)':("Measures-Thousand-Gram.Secundus")}; // Gravitational constant
+```python
+let there = light + '@' + robjam1990 // Forms and functions of the photonic phase physics.
+import xml.etree.ElementTree as ET
+# Parse the XML file
+tree = ET.parse
+root = tree.getroot()
+# Access the elements within the <root> tag
+for element in root:
+	# Perform operations on each element
+	# ...
+	# Example: Print the tag name of each element
+	print(element.tag)
+# Update the XML file
+tree.write
+```
